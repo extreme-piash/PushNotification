@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         txtRegId = (TextView) findViewById(R.id.txt_reg_id);
         txtMessage = (TextView) findViewById(R.id.txt_push_message);
 
+        FirebaseMessaging.getInstance().subscribeToTopic( "news");
+
         mRegistrationBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
